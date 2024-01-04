@@ -107,9 +107,9 @@ function updateScorecard() {
 function endGame() {
     gameActive = false;
     setTimeout(() => {
-        alert(checkDraw() ? 'It\'s a draw!' : `Player ${currentPlayer} wins!`);
+        alert(checkWin() ? `Player ${currentPlayer} wins!` : 'It\'s a draw!');
         // resetGame();  // Don't reset the game immediately after alert
-    }, 100);
+    }, 100);
 }
 
 function restartGame() {

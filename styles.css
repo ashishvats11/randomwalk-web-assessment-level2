@@ -14,6 +14,11 @@ body {
     color:cornsilk ;
     font-size: 80px;
 }
+
+.score{
+    color:cornsilk;
+    font-size: 32px;
+}
 #container{
     display: flex;
     justify-content: center;
