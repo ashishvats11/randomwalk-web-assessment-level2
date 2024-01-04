@@ -110,7 +110,7 @@ body {
     transform: scale(1.2);
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     #board {
         grid-template-columns: repeat(3, 80px);
     }
@@ -131,4 +131,4 @@ body {
     .score{
         font-size: 25px;
     }
-}
+} */
