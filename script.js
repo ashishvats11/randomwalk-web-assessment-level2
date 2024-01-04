@@ -68,6 +68,7 @@ function switchPlayer() {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
+//Function to check a winner
 function checkWin() {
     const winPatterns = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
@@ -91,6 +92,7 @@ function checkWin() {
     return false;
 }
 
+//Function to check if the game is draw
 function checkDraw() {
     if (board.every(cell => cell !== '')) {
         updateScorecard();
@@ -100,18 +102,21 @@ function checkDraw() {
     return false;
 }
 
+
 function updateScorecard() {
     scorecardElement.textContent = `Player X: ${scores['X']} | Player O: ${scores['O']}`;
 }
+
 
 function endGame() {
     gameActive = false;
     setTimeout(() => {
         alert(checkDraw() ? 'It\'s a draw!' : `Player ${currentPlayer} wins!`);
-        // resetGame();  // Don't reset the game immediately after alert
+          
     }, 100);
 }
 
+//function to restart the game
 function restartGame() {
     // Clear the board
     board = ['', '', '', '', '', '', '', '', ''];
